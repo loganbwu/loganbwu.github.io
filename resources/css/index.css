@@ -22,7 +22,7 @@ body {
 }
 
 div {
-	outline: 0px dotted lightgrey;
+	/*outline: 1px dotted lightgrey;*/
 	word-wrap: wrap;
 }
 
