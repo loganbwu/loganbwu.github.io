@@ -1,0 +1,243 @@
+:root {
+	--highlight: #e62563;
+	--darkgrey: #333;
+	--grey: #555;
+	--lightgrey: lightgrey;
+}
+
+* {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size: 14px;
+}
+
+body {
+	background-color: var(--lightgrey);
+	margin: 0;
+}
+
+#main {
+	background-color: white;
+	padding: 64px;
+	box-shadow: 0 0 20px 0 #AAA;
+}
+
+div {
+	outline: 0px dotted lightgrey;
+	word-wrap: wrap;
+}
+
+/* Text styles */
+
+p {
+	margin-top: 4px;
+}
+
+h1 {
+	text-transform: uppercase;
+	margin-bottom: 12px;
+	font-size: 32px;
+	color: var(--highlight);
+	font-weight: lighter;
+}
+
+h2 {
+	margin: 0;
+	font-weight: normal;
+	font-size: 18px;
+	color: var(--darkgrey);
+}
+
+li {
+	color: var(--grey);
+}
+
+.name {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.firstname {
+	color: var(--grey);
+}
+
+.lastname {
+	color: var(--darkgrey);
+}
+
+.contact {
+	text-transform: uppercase;
+	margin-bottom: 1.5rem;
+}
+
+.date {
+	color: var(--highlight);
+}
+
+.date + .location {
+	margin-left: 0.5rem;
+}
+
+.date, .location {
+	font-size: 12px;
+	margin-bottom: 2px;
+}
+
+.description {
+	color: var(--grey);
+}
+
+.publication {
+	padding-left: 1rem;
+}
+
+.detail {
+	font-size: 9px;
+}
+
+#hobbies > ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+/* Layout formatting */
+
+#main {
+	
+}
+
+
+table td{
+	vertical-align: top;
+}
+
+table th {
+	color: var(--darkgrey);
+	font-size: 16px;
+	padding: 0.5rem;
+	font-weight: lighter;
+}
+
+table ul {
+	margin-bottom: 0;
+}
+
+ul {
+	margin: 0;
+	padding-left: 1.5rem;
+}
+
+ul > li {
+	margin-bottom: 4px;
+}
+
+.event {
+	padding-bottom: 12px;
+}
+
+.event > * {
+	margin-bottom: 0;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  margin: 0;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.event-timeline:not(:last-child) {
+    border-left: 3px dashed var(--highlight);
+}
+.event-timeline:last-child {
+    border-left: 3px dashed transparent;
+}
+
+/* Container around content */
+.event-timeline {
+	padding-left: 30px;
+	margin-left: 13.5px;
+	clear: both;
+}
+
+/* The circles on the timeline */
+.event-timeline::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 0px;
+  background-color: white;
+  border: 3px solid var(--highlight);
+  border-radius: 50%;
+  transform: translateY(-6px);
+}
+
+
+/* Layout styles */
+
+#main {
+	max-width: 1080px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.column {
+	flex: 1 1 480px;
+	padding-top: 0;
+	max-width: 640px;
+	page-break-before: always;
+}
+
+#main > .column > * {
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 0;
+}
+
+#main > .column {
+	padding: 0 2rem;
+}
+
+.column-md {
+	flex: 50%;
+}
+
+.column-sm {
+	flex: 35%;
+}
+
+.column-lg {
+	flex: 65%;
+}
+
+@media (min-width: 1088px) {
+	#main > .column + .column {
+		border-left: solid 1px var(--lightgrey);
+	}
+}
+
+/* For printing */
+
+.section {
+	page-break-inside: avoid;
+	-webkit-region-break-inside: avoid;
+}
+
+@page {
+  size: A4;
+  margin: 0,5in;
+}
+
+@media print {
+	html, body {
+		width: 210mm;
+		height: 297mm;
+	}	
+}
