@@ -219,10 +219,7 @@ ul > li {
 	flex: 65%;
 }
 
-@media (min-width: 1218px) {	
-	#main {
-		padding: 64px;
-	}
+@media (min-width: 1089px) {
 
 	#main > .column + .column {
 		border-left: solid 1px var(--lightgrey);
