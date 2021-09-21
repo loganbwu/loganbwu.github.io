@@ -188,8 +188,6 @@ ul > li {
 	padding-top: 0;
 	max-width: 800px;
 	page-break-before: always;
-	-webkit-text-size-adjust: 200%;
-	text-size-adjust: 200%;
 }
 
 #main > .column > * {
