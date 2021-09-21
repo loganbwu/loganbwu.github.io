@@ -17,7 +17,7 @@ body {
 
 #main {
 	background-color: white;
-	padding: 64px;
+	padding-top: 0 64px;
 	box-shadow: 0 0 20px 0 #AAA;
 }
 
@@ -217,7 +217,11 @@ ul > li {
 	flex: 65%;
 }
 
-@media (min-width: 1088px) {
+@media (min-width: 1088px) {	
+	#main {
+		padding: 64px;
+	}
+
 	#main > .column + .column {
 		border-left: solid 1px var(--lightgrey);
 	}
