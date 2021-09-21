@@ -219,7 +219,7 @@ ul > li {
 	flex: 65%;
 }
 
-@media (min-width: 1088px) {	
+@media (min-width: 1218px) {	
 	#main {
 		padding: 64px;
 	}
