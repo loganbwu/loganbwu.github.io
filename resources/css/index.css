@@ -107,8 +107,9 @@ li {
 }
 
 [data-tippy-content] {
-	text-decoration: underline dotted var(--grey);
-	-webkit-text-decoration: underline dotted var(--grey);
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-color: var(--grey);
 	cursor: pointer;
 }
 
@@ -247,6 +248,5 @@ ul > li {
 	
 	[data-tippy-content] {
 		text-decoration: none;
-		-webkit-text-decoration: none;
 	}
 }
