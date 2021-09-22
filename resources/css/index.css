@@ -58,8 +58,6 @@ li {
 .name {
 	font-size: 60px;
 	font-weight: bold;
-	-webkit-text-size-adjust: 400%;
-	text-size-adjust: 400%
 }
 
 .firstname {
