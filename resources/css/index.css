@@ -22,7 +22,7 @@ body {
 #main {
 	background-color: white;
 	padding-top: 0 64px;
-	box-shadow: 0 0 20px 0 #AAA;
+	/*box-shadow: 0 0 20px 0 #AAA;*/
 }
 
 div {
@@ -198,7 +198,7 @@ ul > li {
 }
 
 #main > .column {
-	padding: 0 2rem;
+	padding: 2rem;
 }
 
 .column-sm {
