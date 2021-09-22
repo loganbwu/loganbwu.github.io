@@ -21,7 +21,7 @@ body {
 
 #main {
 	background-color: white;
-	padding-top: 0 64px;
+	padding-bottom: 2rem;
 	/*box-shadow: 0 0 20px 0 #AAA;*/
 }
 
@@ -204,7 +204,7 @@ ul > li {
 }
 
 #main > .column {
-	padding: 2rem;
+	padding: 0 2rem;
 }
 
 .column-sm {
@@ -229,20 +229,30 @@ ul > li {
 /* For printing */
 
 .section {
+	margin-top: 2rem;
 	page-break-inside: avoid;
 	-webkit-region-break-inside: avoid;
 }
 
 @page {
   size: A4;
-  margin: 0,5in;
+  margin: 0.5in;
 }
 
+	
+	#main > .column {
+		break-after: always;
+		page-break-after: always;
+	}
 @media print {
 	html, body {
 		width: 210mm;
 		height: 297mm;
 		-webkit-print-color-adjust: exact;
+	}
+	
+	#main, #main > .column {
+		padding: 0;
 	}
 	
 	[data-tippy-content] {
