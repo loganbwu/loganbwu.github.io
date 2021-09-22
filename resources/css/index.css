@@ -194,24 +194,19 @@ ul > li {
 	padding-top: 0;
 	max-width: 800px;
 	page-break-before: always;
-}
-
-#main > .column > * {
-	margin-top: 0;
-	padding-top: 0;
-	margin-bottom: 0;
+	
 }
 
 #main > .column {
 	padding: 0 2rem;
 }
 
-.column-md {
-	flex: 50%;
-}
-
 .column-sm {
 	flex: 35%;
+}
+
+.column-md {
+	flex: 50%;
 }
 
 .column-lg {
