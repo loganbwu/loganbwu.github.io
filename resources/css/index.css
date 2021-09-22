@@ -207,7 +207,7 @@ ul > li {
 }
 
 .column-sm {
-	flex: 35%;
+	flex: 42%;
 }
 
 .column-md {
@@ -215,7 +215,7 @@ ul > li {
 }
 
 .column-lg {
-	flex: 65%;
+	flex: 58%;
 }
 
 @media (min-width: 1089px) {
