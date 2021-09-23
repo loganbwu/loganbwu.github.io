@@ -38,7 +38,7 @@ p {
 
 h1 {
 	text-transform: uppercase;
-	margin-bottom: 12px;
+	margin-bottom: 6px;
 	font-size: 32px;
 	color: var(--highlight);
 	font-weight: lighter;
@@ -178,7 +178,7 @@ ul > li {
     background-color: white;
     border: 3px solid var(--highlight);
     border-radius: 50%;
-    transform: translateY(-6px);
+    transform: translateY(-4px);
 }
 
 
