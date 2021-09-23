@@ -20,9 +20,8 @@ body {
 }
 
 #main {
-	margin-top: 2rem;
 	background-color: white;
-	padding: 2rem 0;
+	padding-bottom: 2rem;
 	/*box-shadow: 0 0 20px 0 #AAA;*/
 }
 
@@ -201,15 +200,11 @@ ul > li {
 	padding-top: 0;
 	max-width: 800px;
 	page-break-before: always;
-	
 }
 
 #main > .column {
-	padding: 0 2rem;
-}
-
-.section:not(:first-child) {
 	margin-top: 2rem;
+	padding: 0 2rem;
 }
 
 .column-sm {
