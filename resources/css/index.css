@@ -20,8 +20,9 @@ body {
 }
 
 #main {
+	margin-top: 2rem;
 	background-color: white;
-	padding-bottom: 2rem;
+	padding: 2rem 0;
 	/*box-shadow: 0 0 20px 0 #AAA;*/
 }
 
@@ -207,6 +208,10 @@ ul > li {
 	padding: 0 2rem;
 }
 
+.section:not(:first-child) {
+	margin-top: 2rem;
+}
+
 .column-sm {
 	flex: 42%;
 }
@@ -229,7 +234,6 @@ ul > li {
 /* For printing */
 
 .section {
-	margin-top: 2rem;
 	page-break-inside: avoid;
 	-webkit-region-break-inside: avoid;
 }
