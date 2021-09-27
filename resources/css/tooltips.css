@@ -13,3 +13,9 @@
 .tooltip-inner {
 	text-align: left;
 }
+
+@media print {
+	[title] {
+		text-decoration: none;
+	}
+}

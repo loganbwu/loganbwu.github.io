@@ -6,3 +6,9 @@
 	float: right;
 	color: var(--highlight);
 }
+
+@media print {
+	#mapbutton {
+		display: none;
+	}
+}

@@ -244,8 +244,4 @@ ul > li {
 	#main > .column:first-child {
 		margin-top: 0;
 	}
-	
-	[data-tippy-content] {
-		text-decoration: none;
-	}
 }
