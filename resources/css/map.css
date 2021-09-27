@@ -5,6 +5,12 @@
 #mapbutton {
 	float: right;
 	color: var(--highlight);
+	border-radius: 999px;
+	padding: 0 6px;
+}
+
+#mapbutton:hover {
+	background-color: #CCC;
 }
 
 @media print {
