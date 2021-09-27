@@ -1,0 +1,15 @@
+[title] {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-color: var(--grey);
+	cursor: pointer;
+}
+
+.tooltip {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.tooltip-inner {
+	text-align: left;
+}

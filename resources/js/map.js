@@ -1,6 +1,10 @@
-var mymap = L.map('map').setView([51.505, -0.09], 13);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+var map = L.map('map').setView([-36.8559686, 174.7665161], 13);
 
-MicroModal.init()
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);
+
+L.marker([-36.8559686, 174.7665161]).addTo(map).bindPopup("The University of Auckland");
+L.marker([	-37.814451,144.9702478]).addTo(map).bindPopup("Arup Melbourne");
+
+document.getElementById('mapModal').addEventListener('shown.bs.modal', function (event) {
+	map.invalidateSize();
+})
