@@ -104,11 +104,18 @@ li {
   -moz-columns: 2;
 }
 
-[data-tippy-content] {
+/* Tooltips */
+
+[title] {
 	text-decoration: underline;
 	text-decoration-style: dotted;
 	text-decoration-color: var(--grey);
 	cursor: pointer;
+}
+
+.tooltip {
+	font-family: inherit;
+	font-size: inherit;
 }
 
 /* Layout formatting */
@@ -199,7 +206,6 @@ ul > li {
 	flex: 1 1 480px;
 	padding-top: 0;
 	max-width: 800px;
-	page-break-before: always;
 }
 
 #main > .column {
@@ -238,11 +244,6 @@ ul > li {
   margin: 0.5in;
 }
 
-	
-	#main > .column {
-		break-after: always;
-		page-break-after: always;
-	}
 @media print {
 	html, body {
 		width: 210mm;
@@ -252,6 +253,10 @@ ul > li {
 	
 	#main, #main > .column {
 		padding: 0;
+	}
+	
+	#main > .column:first-child {
+		margin-top: 0;
 	}
 	
 	[data-tippy-content] {
