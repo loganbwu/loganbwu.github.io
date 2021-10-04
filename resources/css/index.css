@@ -113,6 +113,11 @@ li {
   -webkit-columns: 2;
   -moz-columns: 2;
 }
+.fa-external-link-alt {
+	font-size: 0.8em;
+	position: relative;
+	top: -0.1em;
+}
 
 /* Layout formatting */
 
