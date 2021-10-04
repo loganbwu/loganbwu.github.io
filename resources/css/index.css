@@ -58,11 +58,13 @@ p {
 	margin-top: 4px;
 }
 h1 {
-	text-transform: uppercase;
+	margin-top: 2rem;
 	margin-bottom: 6px;
-	font-size: 32px;
-	color: var(--highlight);
 	font-weight: lighter;
+	font-size: 32px;
+	line-height: 1em;
+	text-transform: uppercase;
+	color: var(--highlight);
 }
 h2 {
 	margin: 0;
@@ -79,6 +81,7 @@ li {
 .name {
 	font-size: 60px;
 	font-weight: bold;
+	line-height: 1em;
 }
 .firstname {
 	color: var(--grey);
@@ -142,8 +145,9 @@ ul {
 ul > li {
 	margin-bottom: 4px;
 }
-.event {
-	padding-bottom: 12px;
+
+.event + .event {
+	margin-top: 12px;
 }
 .event > * {
 	margin-bottom: 0;
