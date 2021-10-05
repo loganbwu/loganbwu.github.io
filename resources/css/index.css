@@ -90,7 +90,7 @@ li {
 	color: var(--darkgrey);
 }
 .contact {
-	margin-bottom: 1.2rem;
+	margin-bottom: 0.8rem;
 }
 .date {
 	color: var(--highlight);
@@ -103,6 +103,7 @@ li {
 	margin-bottom: 2px;
 }
 .description {
+	margin-top: 0;
 	color: var(--grey);
 }
 .publication {
@@ -136,6 +137,7 @@ table th {
 }
 table ul {
 	margin-bottom: 0;
+	line-height: 1.2em;
 }
 ul {
 	margin: 0;
@@ -152,7 +154,7 @@ ul > li {
 .timeline>.event + .event {
 	padding-top: 0;
 }
-.timeline>.event + .event:not(:last-child) {
+.timeline>.event:not(:last-child) {
 	padding-bottom: 12px;
 }
 .event > * {
