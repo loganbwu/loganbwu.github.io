@@ -103,8 +103,9 @@ li {
 	margin-bottom: 2px;
 }
 .description {
-	margin-top: 0;
+	margin-top: 0.2em;
 	color: var(--grey);
+	line-height: 1.2em;
 }
 .publication {
 	padding-left: 1rem;
