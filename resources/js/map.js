@@ -50,10 +50,14 @@ for (let [name, coords] of Object.entries(markers)) {
 	// add marker to cluster
 	marker_cluster.addLayer(L.marker(coords).bindPopup(name));
 }
-map.addLayer(marker_cluster);
+var added_markers = false;
 
 // Recalculate map size when the modal is opened so correct tile areas are loaded
 document.getElementById('mapModal').addEventListener('shown.bs.modal', function (event) {
 	map.invalidateSize();
 	map.fitBounds(bbox, {padding: [50, 50]});
+	if (!added_markers) {
+		map.addLayer(marker_cluster);
+		added_markers = true;
+	}
 })
