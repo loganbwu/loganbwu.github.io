@@ -14,6 +14,7 @@ mp_geocode(
 var markers = {
 	"The University of Auckland": [-36.85594, 174.7666],
 	"Datacom": [-41.28786,174.7779],
+	"Deloitte": [-36.8461,174.7669],
 	"Harmonic Analytics": [-36.85343,174.7614],
 	"Arup": [-37.82018,144.9512],
 	"Victorian Department of Health": [-37.80929,144.9707],
