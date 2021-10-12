@@ -121,10 +121,10 @@ a, a:hover {
 
 /* Layout formatting */
 
-table td{
+td {
 	vertical-align: top;
 }
-table th {
+th {
 	color: var(--darkgrey);
 	font-size: 16px;
 	padding: 0.5em;
@@ -133,6 +133,7 @@ table th {
 }
 table ul {
 	margin-bottom: 0;
+	margin-top: 0.3em;
 	line-height: 1.2em;
 }
 ul {
