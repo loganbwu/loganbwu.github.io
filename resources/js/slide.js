@@ -32,9 +32,11 @@ var allH1 = $("h1");
 
 allMods.each(function(i, el) {
   var el = $(el);
-  if (el.visible()) {
+  if (el.visible()) { 
     el.addClass("already-visible"); 
-  } 
+  } else {
+    el.addClass("come-in-init");
+  }
 });
 
 allH1.each(function(i, el) {
