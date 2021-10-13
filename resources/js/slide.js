@@ -28,9 +28,19 @@ var win = $(window);
 
 var allMods = $(".section");
 
+var allH1 = $("h1");
+
 allMods.each(function(i, el) {
   var el = $(el);
   if (el.visible()) {
+    el.addClass("already-visible"); 
+  } 
+});
+
+allH1.each(function(i, el) {
+  var el = $(el);
+  if (el.visible()) {
+    el.addClass("reveal"); 
     el.addClass("already-visible"); 
   } 
 });
@@ -41,6 +51,13 @@ win.scroll(function(event) {
     var el = $(el);
     if (el.visible()) {
       el.addClass("come-in"); 
+    } 
+  });
+  
+  allH1.each(function(i, el) {
+    var el = $(el);
+    if (el.visible()) {
+      el.addClass("reveal"); 
     } 
   });
   
