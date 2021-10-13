@@ -1,14 +1,67 @@
-
+/* Panel slide */
 .come-in {
-  transform: translateY(64px);
-  animation: come-in 0.5s ease forwards;
+	transform: translateY(64px);
+	animation: come-in 0.5s ease forwards;
+	animation-delay: 0.1s;
 }
 
 .already-visible {
-  transform: translateY(0);
-  animation: none;
+	transform: translateY(0);
+	animation: none;
 }
 
 @keyframes come-in {
-  to { transform: translateY(0); }
+	to { transform: translateY(0); }
+}
+
+/* h1 reveal */
+
+:root {
+	--animation-delay: 0.1s;
+}
+
+.reveal:not(.already-visible), .reveal:not(.already-visible)::after {
+	animation-duration: 800ms;
+	animation-delay: 0.1s;
+}
+
+.reveal {
+	animation-name: text;
+}
+
+.reveal::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--highlight);
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	animation-name: revealer;
+}
+
+@keyframes text {
+	from {
+        clip-path: inset(0 100% 0 0);
+	}
+	to {
+        clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes revealer {
+	0%, 50% {
+		transform-origin: 0 50%;
+	}
+	60%, 100% {
+	transform-origin: 100% 50%;		
+	}
+	60% {
+	transform: scaleX(1);
+	}
+	100% {
+	transform: scaleX(0);
+	}
 }
