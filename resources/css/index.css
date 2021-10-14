@@ -197,7 +197,7 @@ li {
     transform: translateY(-2px);
 }
 
-@media (min-width: 960px) {
+@media (min-width: 977px) {
 	#main > .column + .column {
 		border-left: solid 1px var(--lightgrey);
 	}
