@@ -205,7 +205,7 @@ li {
 
 /* For printing */
 
-.section {
+section {
 	page-break-inside: avoid;
 	-webkit-region-break-inside: avoid;
 }
