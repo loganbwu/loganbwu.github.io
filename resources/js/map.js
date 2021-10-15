@@ -1,3 +1,7 @@
+/*
+	Leaflet map of locations
+*/
+
 var map = L.map('map').setView([-36.8559686, 174.7665161], 13);
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);

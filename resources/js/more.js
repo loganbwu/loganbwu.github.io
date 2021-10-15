@@ -1,3 +1,7 @@
+/*
+	Use the class 'event-more' to make the div(s) hidden by default with a 'Show {n} more' button at the bottom of the parent div.
+*/
+
 let getSiblings = function (e) {
     // for collecting siblings
     let siblings = [];
@@ -19,7 +23,7 @@ var event_more = document.querySelectorAll(".event-more:last-child"),
 	more_HTML = "<div class='show-more'>Show more </div>"
 for (const em of event_more) {
 	if (!event_more_parent.includes(em.parentNode)) {
-		event_more_parent.push(em.parentNode);	// remember not to use again
+		event_more_parent.push(em.parentNode);	// remember not to insert again
 		em.parentNode.insertAdjacentHTML("beforeend", more_HTML);
 	}
 }

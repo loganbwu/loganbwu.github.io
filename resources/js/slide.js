@@ -1,3 +1,7 @@
+/*
+	Handle slide-in animation for sections and header 1s when actively scrolling.
+*/
+
 (function() {
   var elements;
   var windowHeight;

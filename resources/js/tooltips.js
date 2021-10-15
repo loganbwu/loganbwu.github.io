@@ -1,3 +1,7 @@
+/*
+	Enable Bootstrap tooltips
+*/
+
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'))
 
 tooltipTriggerList.map(function (tooltipTriggerEl) {
