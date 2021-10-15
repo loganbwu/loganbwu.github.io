@@ -1,6 +1,5 @@
 let getSiblings = function (e) {
     // for collecting siblings
-	console.log(e)
     let siblings = [];
     
     // collecting siblings
