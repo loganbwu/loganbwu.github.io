@@ -76,3 +76,9 @@ h1.reveal-init {
 	transform: scaleX(0);
 	}
 }
+
+@media print {
+	h1.reveal-init {
+		clip-path: inset(0 0 0 0);
+	}
+}
