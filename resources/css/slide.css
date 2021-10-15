@@ -32,7 +32,7 @@ h1.reveal-init {
 
 .reveal:not(.already-visible), .reveal:not(.already-visible)::after {
 	animation-duration: 800ms;
-	animation-delay: 0.3s;
+	animation-delay: 0.2s;
 }
 
 .reveal {
