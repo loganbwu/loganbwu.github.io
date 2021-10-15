@@ -54,8 +54,10 @@ marker_cluster.addLayer(L.marker(coords).bindTooltip(name));
 var added_markers = false;
 
 // Recalculate map size when the modal is opened so correct tile areas are loaded
+var mapbutton = document.getElementById("mapbutton"),
+	mapbuttonTooltip = new bootstrap.Tooltip(mapbutton);
 document.getElementById('mapModal').addEventListener('shown.bs.modal', function (event) {
-	document.getElementById("mapbutton").tooltip("hide");
+	mapbuttonTooltip.hide();	// otherwise doesn't disappear on mobile
 	map.invalidateSize();
 	map.fitBounds(bbox, {padding: [50, 50]});
 	if (!added_markers) {
