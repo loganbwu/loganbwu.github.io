@@ -1,52 +1,43 @@
-(function($) {
-	$.fn.visible = function() {
-		var $t            = $(this),
-		$w            = $(window),
-		viewBottom    = $w.scrollTop() + $w.height(),
-		elTop         = $t.offset().top
-		
-		return elTop <= viewBottom;
-	};
-})($);
+(function() {
+  var elements;
+  var windowHeight;
 
-var win = $(window);
-
-var allMods = $("section");
-
-var allH1 = $("h1");
-
-allMods.each(function(i, el) {
-	var el = $(el);
-	if (el.visible()) { 
-		el.addClass("already-visible"); 
-	}
-});
-
-allH1.each(function(i, el) {
-	var el = $(el); 
-	if (el.visible()) {
-		el.addClass("reveal"); 
-		el.addClass("already-visible");
-	}
-	else {
-		el.addClass("reveal-init");
-	}
-});
-
-win.scroll(function(event) {
+  function init() {
+    elements = document.querySelectorAll('section, h1');
+    windowHeight = window.innerHeight;
 	
-	allMods.each(function(i, el) {
-		var el = $(el);
-		if (el.visible()) {
-			el.addClass("come-in"); 
-		} 
-	});
+	for (var i = 0; i < elements.length; i++) {
+		var element = elements[i];
+		var positionFromTop = elements[i].getBoundingClientRect().top;
 	
-	allH1.each(function(i, el) {
-		var el = $(el);
-		if (el.visible()) {
-			el.addClass("reveal"); 
-		} 
-	});
-	
-});	
+		if (positionFromTop - windowHeight <= 0) {
+			element.classList.add('already-visible');
+		}
+		if (element.tagName == 'H1') {
+			element.classList.add('reveal-init');
+		}
+    }
+  }
+
+  function checkPosition() {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight <= 0) {
+		if (element.tagName == 'SECTION') {
+			element.classList.add('come-in');
+		}
+		else if (element.tagName == 'H1') {
+			element.classList.add('reveal');
+		}
+      }
+    }
+  }
+
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', checkPosition);
+
+  init();
+  checkPosition();
+})();

@@ -55,7 +55,7 @@ var added_markers = false;
 
 // Recalculate map size when the modal is opened so correct tile areas are loaded
 document.getElementById('mapModal').addEventListener('shown.bs.modal', function (event) {
-	$("#mapbutton").tooltip("hide");
+	document.getElementById("mapbutton").tooltip("hide");
 	map.invalidateSize();
 	map.fitBounds(bbox, {padding: [50, 50]});
 	if (!added_markers) {
