@@ -32,28 +32,16 @@
 .show-more:hover {
 	background-color: #CCC;
 }
+
 .show-more::before {
   display: inline-block;
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="8" version="1.1"><polygon fill="%23E62563" points="0,0 2,0, 8,6, 14,0 16,0 8,8 0,0"/></svg>');
   transform: translateY(-2px);
 }
+
 .show-more-active::before {
   transform: rotate(180deg);
 }
-
-/* .show-more::before { */
-  /* display: inline-block; */
-  /* border-top: 0.7em solid var(--highlight); */
-  /* border-right: 0.5em solid transparent; */
-  /* border-bottom: 0em dotted; */
-  /* border-left: 0.5em solid transparent; */
-  /* content:''; */
-/* } */
-
-/* .show-more-active::before { */
-  /* border-top: 0em dotted; */
-  /* border-bottom: 0.7em solid var(--highlight); */
-/* } */
 
 /* specify print formatting */
 @media print {
