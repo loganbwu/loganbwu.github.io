@@ -157,9 +157,6 @@ li {
 .timeline>.event + .event {
 	padding-top: 0;
 }
-.timeline>.event:not(:last-child) {
-	padding-bottom: 12px;
-}
 .event > * {
 	margin-bottom: 0;
 }
@@ -172,9 +169,11 @@ li {
 
 /* The actual timeline (the vertical ruler) */
 .event-timeline {
+	padding-bottom: 12px;
     border-left: 2px dashed var(--highlight);
 }
 .event-timeline:nth-last-child(2) {
+	padding-bottom: 0;
     border-left: 2px dashed transparent;
 }
 

@@ -35,14 +35,10 @@
 
 .show-more::before {
   display: inline-block;
-  width: 0;
-  height: 0;
   border-top: 0.7em solid var(--highlight);
   border-right: 0.5em solid transparent;
   border-bottom: 0em dotted;
   border-left: 0.5em solid transparent;
-
-  margin-left: 2px;
   content:'';
 }
 
