@@ -18,10 +18,12 @@ let getSiblings = function (e) {
 };
 
 // Create 'more' text at end of parent node if .event-more appears
-var event_more = document.querySelectorAll(".event-more:last-child"),
+var event_more = document.querySelectorAll(".event-more"),
 	event_more_parent = [],
-	more_HTML = "<div class='show-more'>Show more </div>"
+	more_HTML = "<button class='show-more'>Show more </div>"
 for (const em of event_more) {
+	// Add actual 'hidden' class to event-more elements so site still works without JS
+	em.classList.add("event-more-actual");
 	if (!event_more_parent.includes(em.parentNode)) {
 		event_more_parent.push(em.parentNode);	// remember not to insert again
 		em.parentNode.insertAdjacentHTML("beforeend", more_HTML);
