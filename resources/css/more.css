@@ -29,8 +29,11 @@
 	cursor: pointer;
 }
 
-.show-more:hover {
-	background-color: #CCC;
+/* Solves sticky hover problem on mobile */
+@media (hover: hover) {
+	.show-more:hover {
+		background-color: #CCC;
+	}
 }
 
 .show-more::after {

@@ -10,8 +10,11 @@
 	cursor: pointer;
 }
 
-#mapbutton:hover {
-	background-color: #CCC;
+/* Solves sticky hover problem on mobile */
+@media (hover: hover) {
+	#mapbutton:hover {
+		background-color: #CCC;
+	}
 }
 
 @media print {
