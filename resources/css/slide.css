@@ -1,22 +1,26 @@
 /* Panel slide */
 .come-in-init {
 	transform: translateY(64px);
+	opacity: 0;
 }
 
 .come-in {
 	transform: translateY(64px);
-	animation: come-in 0.5s ease forwards;
+	opacity: 0;
+	animation: come-in 0.5s ease both;
 	animation-delay: 0.1s;
 }
 
 .already-visible {
 	transform: translateY(0);
+	opacity: 1;
 	animation: none;
 }
 
 @keyframes come-in {
 	to {
 		transform: translateY(0);
+		opacity: 1;
 	}
 }
 
