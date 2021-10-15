@@ -171,10 +171,10 @@ li {
 }
 
 /* The actual timeline (the vertical ruler) */
-.event-timeline:not(:last-child) {
+.event-timeline {
     border-left: 2px dashed var(--highlight);
 }
-.event-timeline:last-child {
+.event-timeline:nth-last-child(2) {
     border-left: 2px dashed transparent;
 }
 
