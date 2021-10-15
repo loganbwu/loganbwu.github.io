@@ -1,23 +1,19 @@
 .event-more {
 	display: none;
-	max-height: 0;
 	overflow: hidden;
 }
 
 .event-more-active {
 	display: block;
-	max-height: initial;
 	animation: fadein 1s ease-out;
 }
 
 @keyframes fadein {
 	0% {
-	opacity: 1;
-	max-height: 0;
+	opacity: 0;
 	}
 	100% {
 	opacity: 1;
-	max-height: 999px;
 	}
 }
 
