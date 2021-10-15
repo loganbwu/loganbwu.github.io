@@ -13,6 +13,13 @@ let getSiblings = function (e) {
     return siblings;
 };
 
+// Create 'more' text if .event-more appears
+// .event-more must be the last child of its parent
+var event_more = document.querySelectorAll(".event-more:last-child");
+var more_HTML = "<div class='show-more'>Show more </div>"
+for (const em of event_more) {
+	em.insertAdjacentHTML("afterend", more_HTML);
+}
 
 var morebuttons = document.getElementsByClassName("show-more");
 for (const mb of morebuttons) {
