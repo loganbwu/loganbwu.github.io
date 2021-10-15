@@ -7,7 +7,7 @@
 .come-in {
 	transform: translateY(64px);
 	opacity: 0;
-	animation: come-in 0.5s ease both;
+	animation: come-in 0.5s ease-out both;
 	animation-delay: 0.1s;
 }
 
