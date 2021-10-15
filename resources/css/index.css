@@ -102,6 +102,7 @@ a, a:hover {
 }
 .description {
 	margin-top: 0.2em;
+	margin-bottom: 0;
 	color: var(--grey);
 	line-height: 1.2em;
 }
@@ -159,7 +160,7 @@ li {
 	padding-top: 0;
 }
 .event > * {
-	margin-bottom: 0;
+	/* margin-bottom: 0; */
 }
 
 /* The actual timeline (the vertical ruler) */
