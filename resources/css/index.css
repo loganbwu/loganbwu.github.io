@@ -74,6 +74,7 @@ h2 {
 	font-size: 18px;
 	color: var(--darkgrey);
 }
+
 a, a:hover {
 	color: var(--highlight);
 }
