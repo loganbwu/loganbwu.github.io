@@ -1,4 +1,4 @@
-# loganbwu.github.io
+# CV
 
 Raw HTML/CSS/JS web-based CV for Logan Wu.
 
