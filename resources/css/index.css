@@ -21,7 +21,7 @@ body {
 #main {
 	background-color: white;
 	padding: 2rem 4rem;
-	max-width: 1080px;
+	max-width: 900px;
 	margin: auto;
 	/*box-shadow: 0 0 20px 0 #AAA;*/
 }
@@ -33,10 +33,6 @@ div {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-}
-.column {
-	padding-top: 0;
-	max-width: 800px;
 }
 .column-sm {
 	flex: 42%;
@@ -159,9 +155,6 @@ li {
 }
 .timeline>.event + .event {
 	padding-top: 0;
-}
-.event > * {
-	/* margin-bottom: 0; */
 }
 
 /* The actual timeline (the vertical ruler) */
