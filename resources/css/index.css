@@ -16,7 +16,6 @@ html, body {
 }
 body {
 	background-color: var(--lightgrey);
-	margin: 0;
 }
 #main {
 	background-color: white;
@@ -32,16 +31,12 @@ div {
 .row {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 }
 .column-sm {
-	flex: 42%;
-}
-.column-md {
-	flex: 50%;
+	flex: 30%;
 }
 .column-lg {
-	flex: 58%;
+	flex: 70%;
 }
 
 /* Text styles */
@@ -103,16 +98,13 @@ a, a:hover {
 	color: var(--grey);
 	line-height: 1.2em;
 }
-.publication {
-	padding-left: 1rem;
-}
 .detail {
 	font-size: 9px;
 }
 #hobbies > ul {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
 }
 .fa-external-link-alt {
 	font-size: 0.8em;
@@ -136,7 +128,6 @@ th {
 	text-align: center;
 }
 table ul {
-	margin-bottom: 0;
 	margin-top: 0.3em;
 	line-height: 1.2em;
 }
@@ -149,7 +140,6 @@ li {
 	margin-bottom: 4px;
 	color: var(--grey);
 }
-
 .event + .event {
 	padding-top: 12px;
 }
@@ -159,18 +149,18 @@ li {
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
-  position: relative;
-  margin: 0;
+	position: relative;
+	margin: 0;
 }
 
 /* The actual timeline (the vertical ruler) */
 .event-timeline {
 	padding-bottom: 12px;
-  border-left: 2px dashed var(--highlight);
+	border-left: 2px dashed var(--highlight);
 }
 .event-timeline:last-of-type {
 	padding-bottom: 0;
-  border-left: 2px dashed transparent;
+	border-left: 2px dashed transparent;
 }
 
 /* Container around content */
@@ -181,15 +171,15 @@ li {
 
 /* The circles on the timeline */
 .event-timeline::before {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    left: 0;
-    background-color: white;
-    border: 2px solid var(--highlight);
-    border-radius: 50%;
-    transform: translateY(-2px);
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 0;
+	background-color: white;
+	border: 2px solid var(--highlight);
+	border-radius: 50%;
+	transform: translateY(-2px);
 }
 
 /* For printing */
@@ -200,8 +190,8 @@ section {
 }
 
 @page {
-  size: A4;
-  margin: 0.75in;
+	size: A4;
+	margin: 0.75in;
 }
 
 @media print {
@@ -211,18 +201,18 @@ section {
 		-webkit-print-color-adjust: exact;
 	}
 	
-	#main, #main > .column {
+	#main {
 		padding: 0;
 	}
 	
 	a {
 		display: none;
 	}
-
+	
 	section {
-        page-break-inside: avoid;
+		page-break-inside: avoid;
 	}
-
+	
 	#education {
 		page-break-before: always;
 	}
