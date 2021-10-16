@@ -20,13 +20,13 @@ body {
 }
 #main {
 	background-color: white;
-	padding-bottom: 2rem;
+	padding: 2rem 4rem;
 	max-width: 1080px;
 	margin: auto;
 	/*box-shadow: 0 0 20px 0 #AAA;*/
 }
 div {
-	/*outline: 1px dotted black;*/
+	/* outline: 1px dotted black; */
 	word-wrap: wrap;
 }
 .row {
@@ -35,13 +35,8 @@ div {
 	justify-content: center;
 }
 .column {
-	flex: 1 1 480px;
 	padding-top: 0;
 	max-width: 800px;
-}
-#main > .column {
-	margin-top: 2rem;
-	padding: 0 2rem;
 }
 .column-sm {
 	flex: 42%;
@@ -89,6 +84,12 @@ a, a:hover {
 }
 .contact {
 	margin-bottom: 0.8rem;
+}
+.contact > div {
+	display: inline-block;
+}
+.contact > div:not(:last-child) {
+	margin-right: 2rem;
 }
 .date {
 	color: var(--highlight);
@@ -198,12 +199,6 @@ li {
     transform: translateY(-2px);
 }
 
-@media (min-width: 977px) {
-	#main > .column + .column {
-		border-left: solid 1px var(--lightgrey);
-	}
-}
-
 /* For printing */
 
 section {
@@ -213,7 +208,7 @@ section {
 
 @page {
   size: A4;
-  margin: 0.5in;
+  margin: 0.75in;
 }
 
 @media print {
@@ -227,11 +222,15 @@ section {
 		padding: 0;
 	}
 	
-	#main > .column:first-child {
-		margin-top: 0;
-	}
-	
-	a, canvas {
+	a {
 		display: none;
+	}
+
+	section {
+        page-break-inside: avoid;
+	}
+
+	#education {
+		page-break-before: always;
 	}
 }

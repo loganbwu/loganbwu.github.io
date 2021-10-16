@@ -3,7 +3,6 @@
 }
 
 #mapbutton {
-	float: right;
 	color: var(--highlight);
 	border-radius: 4px;
 	padding: 0 6px;
