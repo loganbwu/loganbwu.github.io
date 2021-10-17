@@ -37,10 +37,6 @@ for (const boid of boids) {
 }
 // Initialise velocities
 
-function modulo (x, n) {
-    return ((x % n) + n) % n;
-};
-
 document.addEventListener('mousemove', function(evt) {
     mousepos = [evt.clientX, evt.clientY];
 },
@@ -146,9 +142,16 @@ function animate() {
         // Update SVG element
         boid.setAttribute("transform", "translate(" + pos[i][0] + " " + pos[i][1] + ") rotate(" + theta + ")");
     }
-    requestAnimationFrame(animate);
+    // requestAnimationFrame(animate);
+    console.log(window.innerWidth)
 }
 
+function main() {
+    if (window.innerWidth > 920) {
+        animate();
+    }
+    requestAnimationFrame(main);
+}
 
-animate();
+main();
 // })
