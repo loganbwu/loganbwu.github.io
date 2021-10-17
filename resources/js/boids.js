@@ -14,7 +14,6 @@ const strength_noise = 0.1;
 const strength_drag = 0.01;
 const strength_mouse = 10;
 
-// document.addEventListener("DOMContentLoaded", function(event) {
 // Create SVG boids
 var svg = document.getElementById("svg-content");
 var basic_boid = document.querySelector(".boid");
@@ -31,7 +30,6 @@ var mousepos = [0, 0];
 var pos = [];
 var vel = [];
 for (const boid of boids) {
-    // pos.push([parseFloat(boid.getAttribute("x")), parseFloat(boid.getAttribute("y"))]);
     pos.push([100 * Math.random() + 500, 100 * Math.random()]);
     vel.push([strength_noise * (Math.random() - 0.5), strength_noise * (Math.random() - 0.5)]);
 }
@@ -142,8 +140,6 @@ function animate() {
         // Update SVG element
         boid.setAttribute("transform", "translate(" + pos[i][0] + " " + pos[i][1] + ") rotate(" + theta + ")");
     }
-    // requestAnimationFrame(animate);
-    console.log(window.innerWidth)
 }
 
 function main() {
@@ -154,4 +150,3 @@ function main() {
 }
 
 main();
-// })
