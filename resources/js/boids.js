@@ -1,11 +1,11 @@
 const v = 5;
 const damping = 0.75;
 
-const max_dist_sep = 100;
-const max_dist_coh = 1000;
+const max_dist_sep = 10;
+const max_dist_coh = 100;
 const wall_range = 50;
 
-const strength_sep = 10;
+const strength_sep = 100;
 const strength_coh = 10;
 const strength_ali = 0.01;
 

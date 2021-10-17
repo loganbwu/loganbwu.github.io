@@ -21,6 +21,7 @@
 				element.classList.add('reveal-init');
 			}
 		}
+		checkPosition();
 	}
 	
 	function onResize() {
@@ -46,7 +47,8 @@
 
 window.addEventListener('scroll', checkPosition);
 window.addEventListener('resize', onResize);
+document.addEventListener('DOMContentLoaded', init);
 
-init();
-checkPosition();
+// init();
+// checkPosition();
 })();
