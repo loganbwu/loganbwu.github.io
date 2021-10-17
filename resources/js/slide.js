@@ -1,14 +1,14 @@
 /*
-	Handle slide-in animation for sections and header 1s when actively scrolling.
+Handle slide-in animation for sections and header 1s when actively scrolling.
 */
 
 (function() {
-  var elements;
-  var windowHeight;
+	var elements;
+	var windowHeight;
+	elements = document.querySelectorAll('section, h1');
 	
-  function init() {
-    elements = document.querySelectorAll('section, h1');
-    windowHeight = window.innerHeight;
+	function init() {
+		windowHeight = window.innerHeight;
 		
 		for (var i = 0; i < elements.length; i++) {
 			var element = elements[i];
@@ -21,10 +21,11 @@
 				element.classList.add('reveal-init');
 			}
 		}
+		checkPosition();
 	}
 	
 	function onResize() {
-    windowHeight = window.innerHeight;
+		windowHeight = window.innerHeight;
 		checkPosition();
 	}
 	
@@ -40,13 +41,11 @@
 				else if (element.tagName == 'H1') {
 					element.classList.add('reveal');
 				}
+			}
 		}
 	}
-}
-
-window.addEventListener('scroll', checkPosition);
-window.addEventListener('resize', onResize);
-
-init();
-checkPosition();
+	
+	window.addEventListener('scroll', checkPosition);
+	window.addEventListener('resize', onResize);
+	document.addEventListener('DOMContentLoaded', init);
 })();

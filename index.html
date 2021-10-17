@@ -11,11 +11,17 @@
     <link href="./resources/css/field.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/slide.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/more.css" type="text/css" rel="stylesheet">
+    <link href="./resources/css/boids.css" type="text/css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/35e805464f.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CV - Logan Wu</title>
 </head>
 <body>
+    <div id="container" class="svg-container">
+        <svg id="svg-content" height="100%" width="100%">
+            <polygon class="boid" points="5,15 0,0 5,5 10,0" fill="#bbb"/>
+        </svg>
+    </div>
     <div id='main'>
         <section id='info'>
             <h1 style='margin-top: 0;'><span class='name'>Logan</span><span class='name name-dark'> Wu</span></h1>
@@ -427,5 +433,8 @@
     <script type="text/javascript" src="./resources/js/map.js"></script>
     <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" type="text/css" rel="stylesheet">
     <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" type="text/css" rel="stylesheet">
+
+    
+    <script type="text/javascript" src="./resources/js/boids.js"></script>
 </body>
 </html>
