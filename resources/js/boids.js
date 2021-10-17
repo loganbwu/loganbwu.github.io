@@ -17,7 +17,7 @@ const strength_mouse = 10;
 // Create SVG boids
 var svg = document.getElementById("svg-content");
 var basic_boid = document.querySelector(".boid");
-for (let i = 1; i < 50; i++) {
+for (let i = 1; i < 25; i++) {
     clone = basic_boid.cloneNode(true);
     svg.appendChild(clone);
 }
