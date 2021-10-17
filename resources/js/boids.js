@@ -41,16 +41,8 @@ function modulo (x, n) {
     return ((x % n) + n) % n;
 };
 
-// var svg = document.querySelector('#svg-content');
-// var pt = svg.createSVGPoint();
-// function cursorPoint(evt){
-//     pt.x = evt.clientX; pt.y = evt.clientY;
-//     return pt.matrixTransform(svg.getScreenCTM().inverse());
-//   }
 document.addEventListener('mousemove', function(evt) {
-    // loc = cursorPoint(evt);
     mousepos = [evt.clientX, evt.clientY];
-    // Use loc.x and loc.y here
 },
 false);
 
@@ -100,12 +92,18 @@ function animate() {
         acc_mouse = [acc_mouse[0] / acc_mouse_norm, acc_mouse[1] / acc_mouse_norm];
         
         // Max separation acceleration
-        // let acc_sep_norm = Math.sqrt(acc_sep[0] ** 2 + acc_sep[1] ** 2);
-        // acc_sep = acc_sep_norm >= 1e-3 ? [acc_sep[0] / acc_sep_norm, acc_sep[1] / acc_sep_norm] : [0, 0];
+        let acc_sep_norm = Math.sqrt(acc_sep[0] ** 2 + acc_sep[1] ** 2);
+        acc_sep = [acc_sep[0] / acc_sep_norm, acc_sep[1] / acc_sep_norm];
+        if (isNaN(acc_sep[0])) {
+            acc_sep = [0, 0];
+        }
         
         // Normalise cohesion acceleration
         let acc_coh_norm = Math.sqrt(acc_coh[0] ** 2 + acc_coh[1] ** 2);
-        acc_coh = acc_coh_norm >= 0 ? [acc_coh[0] / acc_coh_norm, acc_coh[1] / acc_coh_norm] : [0, 0];
+        acc_coh = [acc_coh[0] / acc_coh_norm, acc_coh[1] / acc_coh_norm];
+        if (isNaN(acc_coh[0])) {
+            acc_coh = [0, 0];
+        }
         
         // Calculate neighborhood mean velocity
         vel_ali = [vel_ali[0] / (boids.length-1), vel_ali[1] / (boids.length-1)];
