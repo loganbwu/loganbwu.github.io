@@ -65,8 +65,8 @@ function animate() {
             }
             if (abs_dist_sep < max_dist_coh) {
                 // Cohesion
-                acc_coh[0] -= dist_sep_norm[0];
-                acc_coh[1] -= dist_sep_norm[1];
+                acc_coh[0] -= dist_sep[0];
+                acc_coh[1] -= dist_sep[1];
                 // Alignment
                 vel_ali[0] += vel[j][0];
                 vel_ali[1] += vel[j][1];
