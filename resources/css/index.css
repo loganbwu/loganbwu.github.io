@@ -38,10 +38,10 @@ div {
 	flex-wrap: wrap;
 }
 .column-sm {
-	flex: 30%;
+	flex: 35%;
 }
 .column-lg {
-	flex: 70%;
+	flex: 65%;
 }
 
 /* Text styles */
