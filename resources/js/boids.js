@@ -1,5 +1,5 @@
-const v = 5;
-const damping = 0.1;
+const v = 4;
+const damping = 0.05;
 
 const max_dist_sep = 20;
 const max_dist_coh = 200;
@@ -7,7 +7,7 @@ const wall_range = 100;
 
 const strength_sep = 10;
 const strength_coh = 3;
-const strength_ali = 0.2;
+const strength_ali = 0.5;
 
 const strength_wall = 0.001;
 const strength_noise = 0.01;
@@ -38,10 +38,10 @@ document.addEventListener('mousemove', function(evt) {
 },
 false);
 
-var acc, acc_sep, acc_coh, vel_ali, acc_ali, acc_wall, acc_mouse;
 function norm(x) {
     return Math.sqrt(x[0]**2 + x[1]**2);
 }
+
 function normalise(x) {
     let x_norm = norm(x);
     return x_norm > 0 ? [x[0] / x_norm, x[1] / x_norm] : [0, 0];
@@ -50,9 +50,9 @@ function normalise(x) {
 function animate() {
     for (let i = 0; i < boids.length; i++) {
         // Calculate acceleration
-         acc_sep = [0, 0];
-         acc_coh = [0, 0];
-         vel_ali = [0, 0];
+         let acc_sep = [0, 0];
+         let acc_coh = [0, 0];
+         let vel_ali = [0, 0];
         for (let j = 0; j < boids.length; j++) {
             if (j === i) { continue; }
             let dist_sep = [pos[i][0] - pos[j][0], pos[i][1] - pos[j][1]];
@@ -72,9 +72,17 @@ function animate() {
                 vel_ali[1] += vel[j][1];
             }
         }
+        // Normalise vectors
+        acc_sep = normalise(acc_sep);
+        acc_coh = normalise(acc_coh);
+
+        // Calculate neighborhood mean velocity
+        vel_ali = [vel_ali[0] / (boids.length-1), vel_ali[1] / (boids.length-1)];
+        // Calculate difference between neighborhood mean and boid's self velocity;
+        let acc_ali = [vel_ali[0] - vel[i][0], vel_ali[1] - vel[i][1]];
         
         // Avoid walls
-         acc_wall = [0, 0];
+        let acc_wall = [0, 0];
         if (pos[i][0] < wall_range) {
             acc_wall[0] = (wall_range-pos[i][0]) ** 2;
         } else if (pos[i][0] > (container.offsetWidth - wall_range)) {
@@ -87,23 +95,11 @@ function animate() {
         }
         
         // Go to mouse
-        acc_mouse = [mousepos[0] - pos[i][0], mousepos[1] - pos[i][1]];
-        acc_mouse = normalise(acc_mouse);
-        
-        // Normalise vectors
-        acc_sep = normalise(acc_sep);
-        acc_coh = normalise(acc_coh);
-        
-        // Calculate neighborhood mean velocity
-        vel_ali = [vel_ali[0] / (boids.length-1), vel_ali[1] / (boids.length-1)];
-        // Calculate difference between neighborhood mean and boid's self velocity;
-        let acc_ali = [vel_ali[0] - vel[i][0], vel_ali[1] - vel[i][1]];
-        acc_ali = normalise(acc_ali);
+        let acc_mouse = normalise([mousepos[0] - pos[i][0], mousepos[1] - pos[i][1]]);
         
         // Calculate raw acceleration before drag
-        acc = [0, 0];
+        let acc = [strength_noise * (Math.random()-0.5), strength_noise * (Math.random()-0.5)];
         for (let j = 0; j < 2; j++) {
-            acc[j] += strength_noise * (Math.random()-0.5);
             acc[j] += strength_sep * acc_sep[j];
             acc[j] += strength_coh * acc_coh[j];
             acc[j] += strength_ali * acc_ali[j];
