@@ -1,18 +1,18 @@
 const v = 5;
-const damping = 0.75;
+const damping = 0.5;
 
 const max_dist_sep = 50;
-const max_dist_coh = 500;
+const max_dist_coh = 100;
 const wall_range = 100;
 
-const strength_sep = 1000;
-const strength_coh = 10;
+const strength_sep = 100;
+const strength_coh = 1000;
 const strength_ali = 0.01;
 
-const strength_wall = 100;
+const strength_wall = 1000;
 const strength_noise = 0.01;
 const strength_drag = 0.01;
-const strength_mouse = 10;
+const strength_mouse = 1000;
 
 // Create SVG boids
 var svg = document.getElementById("svg-content");
