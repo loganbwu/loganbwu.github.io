@@ -81,4 +81,9 @@ h1.reveal-init {
 	h1.reveal-init {
 		clip-path: inset(0 0 0 0);
 	}
+
+	.come-in-init {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
