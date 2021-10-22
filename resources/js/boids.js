@@ -107,16 +107,15 @@ function animate() {
             }
         }
         
-        // Integrate acceleration for velocity and apply drag
+        // Integrate acceleration for velocity
         vel[i][0] += damping * acc[0];
         vel[i][1] += damping * acc[1];
         // Normalise velocity
         vel[i] = normalise(vel[i]);
-        vel[i][0] = v * vel[i][0];
-        vel[i][1] = v * vel[i][1];
-        // Integrate velocity for position, wrapping container
-        pos[i][0] = Math.max(Math.min(pos[i][0] + vel[i][0], container.offsetWidth), 0);
-        pos[i][1] = Math.max(Math.min(pos[i][1] + vel[i][1], container.offsetHeight), 0);
+        vel[i] = [v * vel[i][0], v * vel[i][1]];
+        // Integrate velocity for position
+        pos[i][0] += vel[i][0];
+        pos[i][1] += vel[i][1];
         // Calculate velocity angle
         let theta = -Math.atan2(vel[i][0], vel[i][1]) * 180 / Math.PI;
         // Update SVG element
