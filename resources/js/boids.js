@@ -10,14 +10,13 @@ const strength_coh = 3;
 const strength_ali = 0.5;
 
 const strength_wall = 0.001;
-const strength_noise = 0.01;
 const strength_mouse = 4;
 
 // Create SVG boids
 var svg = document.getElementById("svg-content");
 var basic_boid = document.querySelector(".boid");
 for (let i = 1; i < 25; i++) {
-    clone = basic_boid.cloneNode(true);
+    clone = basic_boid.cloneNode();
     svg.appendChild(clone);
 }
 
@@ -30,7 +29,7 @@ var pos = [];
 var vel = [];
 for (const boid of boids) {
     pos.push([100 * Math.random() + 500, 100 * Math.random()]);
-    vel.push([strength_noise * (Math.random() - 0.5), strength_noise * (Math.random() - 0.5)]);
+    vel.push([0, 0]);
 }
 
 document.addEventListener('mousemove', function(evt) {
@@ -95,8 +94,8 @@ function animate() {
         // Go to mouse
         let acc_mouse = normalise([mousepos[0] - pos[i][0], mousepos[1] - pos[i][1]]);
         
-        // Calculate raw acceleration before drag
-        let acc = [strength_noise * (Math.random()-0.5), strength_noise * (Math.random()-0.5)];
+        // Calculate raw acceleration
+        let acc = [0, 0];
         for (let j = 0; j < 2; j++) {
             acc[j] += strength_sep * acc_sep[j];
             acc[j] += strength_coh * acc_coh[j];
@@ -110,7 +109,7 @@ function animate() {
         // Integrate acceleration for velocity
         vel[i][0] += damping * acc[0];
         vel[i][1] += damping * acc[1];
-        // Normalise velocity
+        // Limit velocity
         vel[i] = normalise(vel[i]);
         vel[i] = [v * vel[i][0], v * vel[i][1]];
         // Integrate velocity for position
