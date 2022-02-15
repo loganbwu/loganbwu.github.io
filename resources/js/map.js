@@ -16,6 +16,9 @@ mp_geocode(
 */
 
 var markers = {
+	"Savannah": [32.0024367, -80.9620562],
+	"Baltimore": [39.2673284, -76.7983067],
+	"Wellington College": [-41.30403, 174.78345],
 	"The University of Auckland": [-36.85594, 174.7666],
 	"Datacom": [-41.28786,174.7779],
 	"Deloitte": [-36.8461,174.7669],
