@@ -16,8 +16,8 @@ mp_geocode(
 */
 
 var markers = {
-	"Savannah": [32.0024367, -80.9620562],
-	"Baltimore": [39.2673284, -76.7983067],
+	"Savannah": [32.0024367, 360-80.9620562],
+	"Baltimore": [39.2673284, 360-76.7983067],
 	"Wellington College": [-41.30403, 174.78345],
 	"The University of Auckland": [-36.85594, 174.7666],
 	"Datacom": [-41.28786,174.7779],
@@ -30,7 +30,8 @@ var markers = {
 
 // Draw geodesics between markers
 const options = {
-	color: "var(--highlight)"
+	color: "var(--highlight)",
+	wrap: false
 };
 for (i = 0; i < (Object.entries(markers).length - 1); i++) {
 	new L.Geodesic([Object.values(markers)[i], Object.values(markers)[i+1]],
@@ -38,10 +39,10 @@ for (i = 0; i < (Object.entries(markers).length - 1); i++) {
 }
 
 // Calculate bounds
-var minlat = Infinity
-var minlong = Infinity
-var maxlat = -Infinity
-var maxlong = -Infinity
+var minlat = Infinity,
+	minlong = Infinity,
+	maxlat = -Infinity,
+	maxlong = -Infinity
 for (let [name, coords] of Object.entries(markers)) {
 	minlat = Math.min(minlat, coords[0]);
 	minlong = Math.min(minlong, coords[1]);
@@ -56,7 +57,7 @@ var marker_cluster = L.markerClusterGroup({
 });
 for (let [name, coords] of Object.entries(markers)) {
 	// add marker to cluster
-marker_cluster.addLayer(L.marker(coords).bindTooltip(name));
+	marker_cluster.addLayer(L.marker(coords).bindTooltip(name));
 }
 var added_markers = false;
 
