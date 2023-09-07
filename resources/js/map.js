@@ -25,7 +25,8 @@ var markers = {
 	"Harmonic Analytics": [-36.85343,174.7614],
 	"Arup": [-37.82018,144.9512],
 	"Victorian Department of Health": [-37.80929,144.9707],
-	"Walter and Eliza Hall Institute of Medical Research": [-37.79806,144.956]
+	"Walter and Eliza Hall Institute of Medical Research": [-37.79806,144.956],
+	"Shanghai Jiao Tong University School of Medicine": [31.2139440, 121.4653415]
 }
 
 // Draw geodesics between markers
