@@ -205,6 +205,7 @@ section {
 		width: 210mm;
 		height: 297mm;
 		background-color: white;
+		print-color-adjust: exact;
 		-webkit-print-color-adjust: exact;
 	}
 
