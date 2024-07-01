@@ -204,9 +204,10 @@ section {
 	html, body {
 		width: 210mm;
 		height: 297mm;
+		background-color: white;
 		-webkit-print-color-adjust: exact;
 	}
-	
+
 	#main {
 		padding: 0;
 	}
@@ -219,7 +220,7 @@ section {
 		page-break-inside: avoid;
 	}
 	
-	#education {
+	/* #education {
 		page-break-before: always;
-	}
+	} */
 }
