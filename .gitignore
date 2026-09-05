@@ -1,1 +1,8 @@
 **/.DS_Store
+
+# Actual cover letters are personal/unpublished - keep only the template and tooling tracked.
+cover-letters/*.md
+!cover-letters/template.md
+cover-letters/*.html
+!cover-letters/template.html
+cover-letters/*.pdf
