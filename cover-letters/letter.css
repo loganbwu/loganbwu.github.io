@@ -10,6 +10,12 @@
     margin-bottom: 1em;
 }
 
+.contact {
+    color: var(--highlight);
+}
+
+/* Sign-off name */
 .letter-body p:last-child {
     margin-top: 1.5rem;
+    color: var(--highlight);
 }
